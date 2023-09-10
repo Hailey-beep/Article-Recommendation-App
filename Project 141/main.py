@@ -33,8 +33,8 @@ def get_article():
 @app.route("/liked-article", methods=["POST"])
 def liked_article():
     global all_articles
-    articles_data_data=assign_val()
-    liked_articles.append(articles_data_data)
+    articles_data=assign_val()
+    liked_articles.append(articles_data)
     all_articles.drop([0], inplace=True)
     all_articles = all_articles.reset_index(drop=True)
 
